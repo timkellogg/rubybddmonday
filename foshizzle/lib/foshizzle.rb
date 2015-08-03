@@ -1,23 +1,26 @@
+
 class String
 
-  # changes it to Snoop Dog speak
   define_method(:foshizzle) do
-    returned_array = []
+    words = self.split(" ")
 
-    self.chars.each_with_index() do |char, index|
-      if index != 0
-        if char == "s"
-          returned_array.push("z")
+    words.map! do |word|
+      index = 0
+      characters = word.split('')
+      characters.map! do |char|
+
+        if char == 's' && index != 0
+          index += 1
+          "z"
         else
-          returned_array.push(char)
+          index += 1
+          char
         end
-      else
-        returned_array.push(char)
+
+
       end
-
-
+      characters.join('')
     end
-
-    returned_array.join('')
+    words.join(' ')
   end
 end
