@@ -30,4 +30,7 @@ describe("String#title_case") do
     expect(("THiS is a TItLe").title_case()).to(eq("This is a Title"))
   end
 
+  it("handles unique case entires") do
+    expect(("hello Mcburt and O'Burty").title_case()).to(eq("Hello McBurt and O'Burty"))
+  end
 end
