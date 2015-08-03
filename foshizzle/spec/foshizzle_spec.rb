@@ -14,4 +14,8 @@ describe("String#foshizzle") do
   it('replaces letters correctly in a string of words') do
     expect("moses supposes his toeses are roses".foshizzle()).to(eq("mozez suppozez hiz toezez are rozez"))
   end
+
+  it('makes correct replacements regardless of case') do
+    expect("Mrs. McSweet's street is Astoria Street!".foshizzle).to(eq("Mrz. McSweet'z street iz Aztoria Street!"))
+  end
 end
