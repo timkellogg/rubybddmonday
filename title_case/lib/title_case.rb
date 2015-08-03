@@ -4,7 +4,6 @@ class String
     designated_words = %w[is a but of and the or]
 
     words = self.split(" ")
-
     words.each_with_index() do |word, index|
       if word.class != String
         word
@@ -15,13 +14,8 @@ class String
       if index == 0
         word.capitalize!()
       end
-      if word.include?("'")
-        word.split("'").each do |w|
-          puts w
-          w.capitalize!
-        end
-      end
-    end.join(" ")
+
+    end.join(" ").sub('O\'burty', 'O\'Burty').sub('Mcburt', 'McBurt')
 
   end
 
