@@ -26,6 +26,8 @@ describe("String#title_case") do
     expect(("WORDS").title_case()).to(eq("Words"))
   end
 
-
+  it("handles mixed cases") do
+    expect(("THiS is a TItLe").title_case()).to(eq("This is a Title"))
+  end
 
 end
