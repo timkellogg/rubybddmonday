@@ -7,7 +7,7 @@ describe("String#title_case") do
   end
 
   it("returns every word capitalized in the title") do
-    expect(("epicodus is cool").title_case()).to(eq("Epicodus Is Cool"))
+    expect(("epicodus is cool").title_case()).to(eq("Epicodus is Cool"))
   end
 
   it("does not capitalize designated prepositions") do
@@ -22,6 +22,9 @@ describe("String#title_case") do
     expect(("10 is a cool number").title_case()).to(eq("10 is a Cool Number"))
   end
 
+  it("will handle all uppercase") do
+    expect(("WORDS").title_case()).to(eq("Words"))
+  end
 
 
 
