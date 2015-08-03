@@ -5,7 +5,11 @@ class Fixnum
     index  = 1
 
     while index <= self do
-      if index % 3 == 0
+      if index % 15 == 0
+        output.push("pingpong")
+      elsif index % 5 == 0
+        output.push("pong")
+      elsif index % 3 == 0
         output.push("ping")
       else
         output.push(index)
